@@ -26,7 +26,7 @@ namespace PicoBrewPoc
             client.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
             string json = client.UploadString(getAllSessionsForUser, myParameters);
 
-            var picoSessions = JsonConvert.DeserializeObject<List<GetAllSessionsForUserResponse>>(json);
+            var picoSessions = JsonConvert.DeserializeObject<GetAllSessionsForUserResponse>(json);
 
             Console.ReadLine();
         }
